@@ -17,7 +17,7 @@ const techColors: Record<string, string> = {
   Docker: 'bg-blue-600/10 text-blue-300 border-blue-600/20',
   'Tailwind CSS': 'bg-teal-500/10 text-teal-300 border-teal-500/20',
   'Framer Motion': 'bg-purple-500/10 text-purple-300 border-purple-500/20',
-  Express: 'bg-slate-500/10 text-slate-300 border-slate-500/20',
+  Express: 'bg-slate-500/10 text-[var(--text-muted)] border-slate-500/20',
   default: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/20',
 };
 
@@ -38,30 +38,30 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
       className="group relative"
     >
       <motion.div
-        className="h-full p-6 rounded-2xl border border-[#2a2a3a] bg-[#13131a] hover:border-indigo-500/40 transition-all duration-300 flex flex-col"
+        className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-all duration-300 hover:border-indigo-500/40"
         whileHover={{ y: -4 }}
         transition={{ duration: 0.2 }}
       >
         {project.featured && (
-          <span className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-medium">
+          <span className="absolute top-4 right-4 rounded-full border border-indigo-500/30 bg-indigo-500/20 px-2 py-0.5 text-xs font-medium text-indigo-300">
             Featured
           </span>
         )}
 
         <div className="mb-4">
-          <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+          <span className="text-xs font-semibold tracking-wider text-[var(--text-subtle)] uppercase">
             {project.category}
           </span>
-          <h3 className="text-white font-bold text-xl mt-1 mb-2 group-hover:text-indigo-300 transition-colors duration-200">
+          <h3 className="mt-1 mb-2 text-xl font-bold text-[var(--text)] transition-colors duration-200 group-hover:text-indigo-300">
             {project.title}
           </h3>
-          <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
+          <p className="text-sm leading-relaxed text-[var(--text-muted)]">{project.description}</p>
         </div>
 
-        <ul className="space-y-1 mb-5 flex-1">
+        <ul className="mb-5 flex-1 space-y-1">
           {project.highlights.slice(0, 3).map((h) => (
-            <li key={h} className="text-slate-500 text-xs flex items-start gap-2">
-              <span className="text-indigo-400 mt-0.5 shrink-0">▸</span>
+            <li key={h} className="flex items-start gap-2 text-xs text-[var(--text-subtle)]">
+              <span className="mt-0.5 shrink-0 text-indigo-400">▸</span>
               {h}
             </li>
           ))}
@@ -71,7 +71,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
           {project.tech.map((t) => (
             <span
               key={t}
-              className={`px-2 py-0.5 rounded-full border text-xs font-medium ${getTechColor(t)}`}
+              className={`rounded-full border px-2 py-0.5 text-xs font-medium ${getTechColor(t)}`}
             >
               {t}
             </span>
@@ -87,21 +87,24 @@ export default function Projects() {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: '-80px' });
 
-  const filtered = activeCategory === 'All' ? projects : projects.filter((p) => p.category === activeCategory);
+  const filtered =
+    activeCategory === 'All' ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="px-6 py-24">
+      <div className="mx-auto max-w-6xl">
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 30 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
-          <span className="text-indigo-400 text-sm font-semibold tracking-widest uppercase">Portfolio</span>
-          <h2 className="text-4xl font-bold text-white mt-2 mb-4">Projects</h2>
-          <p className="text-slate-500 max-w-xl mx-auto">
+          <span className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+            Portfolio
+          </span>
+          <h2 className="mt-2 mb-4 text-4xl font-bold text-[var(--text)]">Projects</h2>
+          <p className="mx-auto max-w-xl text-[var(--text-subtle)]">
             A collection of React and Vue applications showcasing full-stack and frontend expertise.
           </p>
         </motion.div>
@@ -110,16 +113,16 @@ export default function Projects() {
           initial={{ opacity: 0 }}
           animate={headerInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="flex items-center justify-center gap-2 mb-10"
+          className="mb-10 flex items-center justify-center gap-2"
         >
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${
                 activeCategory === cat
                   ? 'bg-indigo-600 text-white'
-                  : 'text-slate-400 hover:text-white border border-[#2a2a3a] hover:border-indigo-500/30'
+                  : 'border border-[var(--border)] text-[var(--text-muted)] hover:border-indigo-500/30 hover:text-[var(--text)]'
               }`}
             >
               {cat}
@@ -134,7 +137,7 @@ export default function Projects() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
           >
             {filtered.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />

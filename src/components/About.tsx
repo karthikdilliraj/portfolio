@@ -21,36 +21,38 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="px-6 py-24">
+      <div className="mx-auto max-w-6xl">
         <FadeIn>
-          <div className="text-center mb-16">
-            <span className="text-indigo-400 text-sm font-semibold tracking-widest uppercase">About Me</span>
-            <h2 className="text-4xl font-bold text-white mt-2">Who I Am</h2>
+          <div className="mb-16 text-center">
+            <span className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+              About Me
+            </span>
+            <h2 className="mt-2 text-4xl font-bold text-[var(--text)]">Who I Am</h2>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center gap-12 md:grid-cols-2">
           <FadeIn delay={0.1}>
             <div className="space-y-6">
-              <p className="text-slate-400 text-lg leading-relaxed">{personal.summary}</p>
-              <p className="text-slate-400 leading-relaxed">
-                I specialize in building modern web apps with React and Vue.js on the frontend, backed by
-                Node.js, Java, and Python services. I care deeply about clean architecture, performance, and
-                developer experience.
+              <p className="text-lg leading-relaxed text-[var(--text-muted)]">{personal.summary}</p>
+              <p className="leading-relaxed text-[var(--text-muted)]">
+                I specialize in building modern web apps with React and Vue.js on the frontend,
+                backed by Node.js, Java, and Python services. I care deeply about clean
+                architecture, performance, and developer experience.
               </p>
 
               <div className="flex flex-col gap-3 pt-2">
-                <div className="flex items-center gap-3 text-slate-400">
-                  <MapPin size={16} className="text-indigo-400 shrink-0" />
+                <div className="flex items-center gap-3 text-[var(--text-muted)]">
+                  <MapPin size={16} className="shrink-0 text-indigo-400" />
                   <span>{personal.location}</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-400">
-                  <Briefcase size={16} className="text-indigo-400 shrink-0" />
+                <div className="flex items-center gap-3 text-[var(--text-muted)]">
+                  <Briefcase size={16} className="shrink-0 text-indigo-400" />
                   <span>5+ years of professional experience</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-400">
-                  <GraduationCap size={16} className="text-indigo-400 shrink-0" />
+                <div className="flex items-center gap-3 text-[var(--text-muted)]">
+                  <GraduationCap size={16} className="shrink-0 text-indigo-400" />
                   <span>MEng, Carleton University (GPA: 11.6/12)</span>
                 </div>
               </div>
@@ -62,26 +64,31 @@ export default function About() {
               {education.map((edu) => (
                 <div
                   key={edu.institution}
-                  className="p-6 rounded-2xl border border-[#2a2a3a] bg-[#13131a] hover:border-indigo-500/30 transition-colors duration-300"
+                  className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-colors duration-300 hover:border-indigo-500/30"
                 >
-                  <div className="flex items-start justify-between gap-4 mb-3">
+                  <div className="mb-3 flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="text-white font-semibold text-lg">{edu.institution}</h3>
-                      <p className="text-indigo-400 text-sm font-medium">
+                      <h3 className="text-lg font-semibold text-[var(--text)]">
+                        {edu.institution}
+                      </h3>
+                      <p className="text-sm font-medium text-indigo-400">
                         {edu.degree} · {edu.field}
                       </p>
                     </div>
-                    <span className="text-slate-500 text-sm shrink-0">{edu.period}</span>
+                    <span className="shrink-0 text-sm text-[var(--text-subtle)]">{edu.period}</span>
                   </div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">
+                  <div className="mb-3 flex items-center gap-2">
+                    <span className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-2 py-0.5 text-xs font-medium text-indigo-300">
                       GPA: {edu.gpa}
                     </span>
                   </div>
                   <ul className="space-y-1">
                     {edu.highlights.map((h) => (
-                      <li key={h} className="text-slate-400 text-sm flex items-start gap-2">
-                        <span className="text-indigo-400 mt-1.5 shrink-0">▸</span>
+                      <li
+                        key={h}
+                        className="flex items-start gap-2 text-sm text-[var(--text-muted)]"
+                      >
+                        <span className="mt-1.5 shrink-0 text-indigo-400">▸</span>
                         {h}
                       </li>
                     ))}

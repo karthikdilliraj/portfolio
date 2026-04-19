@@ -3,13 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
 import { experience } from '../data/portfolio';
 
-function ExperienceCard({
-  exp,
-  index,
-}: {
-  exp: (typeof experience)[0];
-  index: number;
-}) {
+function ExperienceCard({ exp, index }: { exp: (typeof experience)[0]; index: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
 
@@ -19,39 +13,39 @@ function ExperienceCard({
       initial={{ opacity: 0, x: -30 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
-      className="relative pl-8 pb-12 last:pb-0"
+      className="relative pb-12 pl-8 last:pb-0"
     >
       {/* Timeline line */}
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-[#2a2a3a]" />
+      <div className="absolute top-0 bottom-0 left-0 w-px bg-[#2a2a3a]" />
 
       {/* Timeline dot */}
       <motion.div
         initial={{ scale: 0 }}
         animate={inView ? { scale: 1 } : {}}
         transition={{ delay: index * 0.1 + 0.2, duration: 0.3 }}
-        className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-indigo-500 ring-4 ring-[#0a0a0f]"
+        className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-indigo-500 ring-4 ring-[var(--bg)]"
       />
 
-      <div className="p-6 rounded-2xl border border-[#2a2a3a] bg-[#13131a] hover:border-indigo-500/30 transition-colors duration-300">
-        <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-colors duration-300 hover:border-indigo-500/30">
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h3 className="text-white font-bold text-xl">{exp.role}</h3>
-            <div className="flex items-center gap-2 mt-1">
+            <h3 className="text-xl font-bold text-[var(--text)]">{exp.role}</h3>
+            <div className="mt-1 flex items-center gap-2">
               <Briefcase size={13} className="text-indigo-400" />
-              <span className="text-indigo-300 font-medium text-sm">{exp.company}</span>
-              <span className="text-slate-600">·</span>
-              <span className="text-slate-500 text-sm">{exp.location}</span>
+              <span className="text-sm font-medium text-indigo-300">{exp.company}</span>
+              <span className="text-[var(--text-faint)]">·</span>
+              <span className="text-sm text-[var(--text-subtle)]">{exp.location}</span>
             </div>
           </div>
-          <span className="px-3 py-1 rounded-full bg-[#1a1a24] border border-[#2a2a3a] text-slate-400 text-xs font-medium">
+          <span className="rounded-full border border-[var(--border)] bg-[var(--surface-hover)] px-3 py-1 text-xs font-medium text-[var(--text-muted)]">
             {exp.period}
           </span>
         </div>
 
         <ul className="space-y-2">
           {exp.highlights.map((h) => (
-            <li key={h} className="text-slate-400 text-sm flex items-start gap-2">
-              <span className="text-indigo-400 mt-1 shrink-0">▸</span>
+            <li key={h} className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+              <span className="mt-1 shrink-0 text-indigo-400">▸</span>
               {h}
             </li>
           ))}
@@ -66,17 +60,19 @@ export default function Experience() {
   const headerInView = useInView(headerRef, { once: true, margin: '-80px' });
 
   return (
-    <section id="experience" className="py-24 px-6 bg-[#0d0d14]">
-      <div className="max-w-3xl mx-auto">
+    <section id="experience" className="bg-[var(--bg-alt)] px-6 py-24">
+      <div className="mx-auto max-w-3xl">
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 30 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <span className="text-indigo-400 text-sm font-semibold tracking-widest uppercase">Career</span>
-          <h2 className="text-4xl font-bold text-white mt-2">Work Experience</h2>
+          <span className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+            Career
+          </span>
+          <h2 className="mt-2 text-4xl font-bold text-[var(--text)]">Work Experience</h2>
         </motion.div>
 
         <div className="relative ml-4">
