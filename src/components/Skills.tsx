@@ -11,19 +11,19 @@ const categories = [
 ];
 
 const colorMap: Record<string, string> = {
-  cyan: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20 hover:bg-cyan-500/20',
-  indigo: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/20 hover:bg-indigo-500/20',
-  purple: 'bg-purple-500/10 text-purple-300 border-purple-500/20 hover:bg-purple-500/20',
-  orange: 'bg-orange-500/10 text-orange-300 border-orange-500/20 hover:bg-orange-500/20',
-  green: 'bg-green-500/10 text-green-300 border-green-500/20 hover:bg-green-500/20',
+  cyan: 'bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border-cyan-500/30 hover:bg-cyan-500/20',
+  indigo: 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/30 hover:bg-indigo-500/20',
+  purple: 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/30 hover:bg-purple-500/20',
+  orange: 'bg-orange-500/10 text-orange-700 dark:text-orange-300 border-orange-500/30 hover:bg-orange-500/20',
+  green: 'bg-green-500/10 text-green-700 dark:text-green-300 border-green-500/30 hover:bg-green-500/20',
 };
 
 const headerColorMap: Record<string, string> = {
-  cyan: 'text-cyan-400',
-  indigo: 'text-indigo-400',
-  purple: 'text-purple-400',
-  orange: 'text-orange-400',
-  green: 'text-green-400',
+  cyan: 'text-cyan-700 dark:text-cyan-400',
+  indigo: 'text-indigo-700 dark:text-indigo-400',
+  purple: 'text-purple-700 dark:text-purple-400',
+  orange: 'text-orange-700 dark:text-orange-400',
+  green: 'text-green-700 dark:text-green-400',
 };
 
 function SkillCard({ cat, index }: { cat: (typeof categories)[0]; index: number }) {

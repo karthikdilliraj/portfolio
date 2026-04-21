@@ -5,20 +5,20 @@ import { projects } from '../data/portfolio';
 const categories = ['All', 'Full Stack', 'Frontend'];
 
 const techColors: Record<string, string> = {
-  React: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20',
-  'Vue 3': 'bg-green-500/10 text-green-300 border-green-500/20',
-  Vue: 'bg-green-500/10 text-green-300 border-green-500/20',
-  TypeScript: 'bg-blue-500/10 text-blue-300 border-blue-500/20',
-  'Node.js': 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20',
-  Java: 'bg-orange-500/10 text-orange-300 border-orange-500/20',
-  'Spring Boot': 'bg-green-600/10 text-green-400 border-green-600/20',
-  PostgreSQL: 'bg-sky-500/10 text-sky-300 border-sky-500/20',
-  Redis: 'bg-red-500/10 text-red-300 border-red-500/20',
-  Docker: 'bg-blue-600/10 text-blue-300 border-blue-600/20',
-  'Tailwind CSS': 'bg-teal-500/10 text-teal-300 border-teal-500/20',
-  'Framer Motion': 'bg-purple-500/10 text-purple-300 border-purple-500/20',
-  Express: 'bg-slate-500/10 text-[var(--text-muted)] border-slate-500/20',
-  default: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/20',
+  React: 'bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border-cyan-500/30',
+  'Vue 3': 'bg-green-500/10 text-green-700 dark:text-green-300 border-green-500/30',
+  Vue: 'bg-green-500/10 text-green-700 dark:text-green-300 border-green-500/30',
+  TypeScript: 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/30',
+  'Node.js': 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30',
+  Java: 'bg-orange-500/10 text-orange-700 dark:text-orange-300 border-orange-500/30',
+  'Spring Boot': 'bg-green-600/10 text-green-700 dark:text-green-400 border-green-600/30',
+  PostgreSQL: 'bg-sky-500/10 text-sky-700 dark:text-sky-300 border-sky-500/30',
+  Redis: 'bg-red-500/10 text-red-700 dark:text-red-300 border-red-500/30',
+  Docker: 'bg-blue-600/10 text-blue-700 dark:text-blue-300 border-blue-600/30',
+  'Tailwind CSS': 'bg-teal-500/10 text-teal-700 dark:text-teal-300 border-teal-500/30',
+  'Framer Motion': 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/30',
+  Express: 'bg-slate-500/10 text-slate-700 dark:text-slate-300 border-slate-500/30',
+  default: 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/30',
 };
 
 function getTechColor(tech: string) {
@@ -43,7 +43,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         transition={{ duration: 0.2 }}
       >
         {project.featured && (
-          <span className="absolute top-4 right-4 rounded-full border border-indigo-500/30 bg-indigo-500/20 px-2 py-0.5 text-xs font-medium text-indigo-300">
+          <span className="absolute top-4 right-4 rounded-full border border-indigo-500/40 bg-indigo-500/15 px-2 py-0.5 text-xs font-medium text-indigo-700 dark:text-indigo-300">
             Featured
           </span>
         )}
@@ -52,7 +52,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
           <span className="text-xs font-semibold tracking-wider text-[var(--text-subtle)] uppercase">
             {project.category}
           </span>
-          <h3 className="mt-1 mb-2 text-xl font-bold text-[var(--text)] transition-colors duration-200 group-hover:text-indigo-300">
+          <h3 className="mt-1 mb-2 text-xl font-bold text-[var(--text)] transition-colors duration-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-300">
             {project.title}
           </h3>
           <p className="text-sm leading-relaxed text-[var(--text-muted)]">{project.description}</p>

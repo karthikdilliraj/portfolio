@@ -16,7 +16,7 @@ function ExperienceCard({ exp, index }: { exp: (typeof experience)[0]; index: nu
       className="relative pb-12 pl-8 last:pb-0"
     >
       {/* Timeline line */}
-      <div className="absolute top-0 bottom-0 left-0 w-px bg-[#2a2a3a]" />
+      <div className="absolute top-0 bottom-0 left-0 w-px bg-[var(--border)]" />
 
       {/* Timeline dot */}
       <motion.div
@@ -32,7 +32,7 @@ function ExperienceCard({ exp, index }: { exp: (typeof experience)[0]; index: nu
             <h3 className="text-xl font-bold text-[var(--text)]">{exp.role}</h3>
             <div className="mt-1 flex items-center gap-2">
               <Briefcase size={13} className="text-indigo-400" />
-              <span className="text-sm font-medium text-indigo-300">{exp.company}</span>
+              <span className="text-sm font-medium text-indigo-600 dark:text-indigo-300">{exp.company}</span>
               <span className="text-[var(--text-faint)]">·</span>
               <span className="text-sm text-[var(--text-subtle)]">{exp.location}</span>
             </div>
