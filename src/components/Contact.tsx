@@ -37,7 +37,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
+          <span className="text-sm font-semibold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
             Contact
           </span>
           <h2 className="mt-2 mb-4 text-4xl font-bold text-[var(--text)]">Get In Touch</h2>
@@ -68,19 +68,19 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="group flex items-center gap-3 rounded-xl p-3 transition-colors duration-200 hover:bg-[var(--surface-hover)]"
                   >
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 transition-colors group-hover:bg-indigo-500/20">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-teal-500/20 bg-teal-500/10 text-teal-400 transition-colors group-hover:bg-teal-500/20">
                       <Icon size={16} />
                     </div>
                     <div>
                       <p className="text-xs text-[var(--text-subtle)]">{label}</p>
-                      <p className="text-sm font-medium text-[var(--text-muted)] transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-300">
+                      <p className="text-sm font-medium text-[var(--text-muted)] transition-colors group-hover:text-teal-600 dark:group-hover:text-teal-300">
                         {value}
                       </p>
                     </div>
                   </a>
                 ) : (
                   <div className="flex items-center gap-3 p-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-indigo-500/20 bg-indigo-500/10 text-indigo-400">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-teal-500/20 bg-teal-500/10 text-teal-400">
                       <Icon size={16} />
                     </div>
                     <div>
@@ -96,7 +96,7 @@ export default function Contact() {
           <div className="mt-6 border-t border-[var(--border)] pt-6 text-center">
             <motion.a
               href={`mailto:${personal.email}`}
-              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-8 py-3 font-semibold text-white transition-colors duration-200 hover:bg-indigo-500"
+              className="inline-flex items-center gap-2 rounded-xl bg-teal-600 px-8 py-3 font-semibold text-white transition-colors duration-200 hover:bg-teal-500"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

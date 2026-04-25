@@ -35,7 +35,7 @@ export default function Hero() {
     >
       {/* Background glow */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-1/3 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/10 blur-3xl" />
+        <div className="absolute top-1/3 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-600/10 blur-3xl" />
         <div className="absolute top-1/2 left-1/4 h-[300px] w-[300px] rounded-full bg-cyan-500/5 blur-3xl" />
       </div>
 
@@ -56,8 +56,8 @@ export default function Hero() {
         className="relative max-w-4xl text-center"
       >
         <motion.div variants={item} className="mb-4">
-          <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-medium text-indigo-700 dark:text-indigo-300">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-indigo-400" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-sm font-medium text-teal-700 dark:text-teal-300">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-teal-400" />
             Available for opportunities
           </span>
         </motion.div>
@@ -67,7 +67,7 @@ export default function Hero() {
           className="mb-4 text-5xl leading-tight font-bold tracking-tight text-[var(--text)] sm:text-7xl"
         >
           Hi, I'm{' '}
-          <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
             Karthik
           </span>
         </motion.h1>
@@ -89,7 +89,7 @@ export default function Hero() {
         <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-4">
           <motion.a
             href="#projects"
-            className="rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-indigo-500"
+            className="rounded-xl bg-teal-600 px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-teal-500"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -97,7 +97,7 @@ export default function Hero() {
           </motion.a>
           <motion.a
             href="mailto:karthikshaik@gmail.com"
-            className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold text-[var(--text-muted)] transition-all duration-200 hover:border-indigo-500/50 hover:text-[var(--text)]"
+            className="rounded-xl border border-[var(--border)] px-6 py-3 font-semibold text-[var(--text-muted)] transition-all duration-200 hover:border-teal-500/50 hover:text-[var(--text)]"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -116,7 +116,7 @@ export default function Hero() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-muted)] transition-all duration-200 hover:border-indigo-500/50 hover:text-[var(--text)]"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-muted)] transition-all duration-200 hover:border-teal-500/50 hover:text-[var(--text)]"
               whileHover={{ scale: 1.1, y: -3 }}
               whileTap={{ scale: 0.95 }}
               aria-label={label}

@@ -18,7 +18,7 @@ const techColors: Record<string, string> = {
   'Tailwind CSS': 'bg-teal-500/10 text-teal-700 dark:text-teal-300 border-teal-500/30',
   'Framer Motion': 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/30',
   Express: 'bg-slate-500/10 text-slate-700 dark:text-slate-300 border-slate-500/30',
-  default: 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/30',
+  default: 'bg-teal-500/10 text-teal-700 dark:text-teal-300 border-teal-500/30',
 };
 
 function getTechColor(tech: string) {
@@ -38,12 +38,12 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
       className="group relative"
     >
       <motion.div
-        className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-all duration-300 hover:border-indigo-500/40"
+        className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-all duration-300 hover:border-teal-500/40"
         whileHover={{ y: -4 }}
         transition={{ duration: 0.2 }}
       >
         {project.featured && (
-          <span className="absolute top-4 right-4 rounded-full border border-indigo-500/40 bg-indigo-500/15 px-2 py-0.5 text-xs font-medium text-indigo-700 dark:text-indigo-300">
+          <span className="absolute top-4 right-4 rounded-full border border-teal-500/40 bg-teal-500/15 px-2 py-0.5 text-xs font-medium text-teal-700 dark:text-teal-300">
             Featured
           </span>
         )}
@@ -52,7 +52,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
           <span className="text-xs font-semibold tracking-wider text-[var(--text-subtle)] uppercase">
             {project.category}
           </span>
-          <h3 className="mt-1 mb-2 text-xl font-bold text-[var(--text)] transition-colors duration-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-300">
+          <h3 className="mt-1 mb-2 text-xl font-bold text-[var(--text)] transition-colors duration-200 group-hover:text-teal-600 dark:group-hover:text-teal-300">
             {project.title}
           </h3>
           <p className="text-sm leading-relaxed text-[var(--text-muted)]">{project.description}</p>
@@ -61,7 +61,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         <ul className="mb-5 flex-1 space-y-1">
           {project.highlights.slice(0, 3).map((h) => (
             <li key={h} className="flex items-start gap-2 text-xs text-[var(--text-subtle)]">
-              <span className="mt-0.5 shrink-0 text-indigo-400">▸</span>
+              <span className="mt-0.5 shrink-0 text-teal-400">▸</span>
               {h}
             </li>
           ))}
@@ -100,7 +100,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
+          <span className="text-sm font-semibold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
             Portfolio
           </span>
           <h2 className="mt-2 mb-4 text-4xl font-bold text-[var(--text)]">Projects</h2>
@@ -121,8 +121,8 @@ export default function Projects() {
               onClick={() => setActiveCategory(cat)}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${
                 activeCategory === cat
-                  ? 'bg-indigo-600 text-white'
-                  : 'border border-[var(--border)] text-[var(--text-muted)] hover:border-indigo-500/30 hover:text-[var(--text)]'
+                  ? 'bg-teal-600 text-white'
+                  : 'border border-[var(--border)] text-[var(--text-muted)] hover:border-teal-500/30 hover:text-[var(--text)]'
               }`}
             >
               {cat}

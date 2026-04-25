@@ -4,7 +4,7 @@ import { skills } from '../data/portfolio';
 
 const categories = [
   { label: 'Frontend', key: 'frontend' as const, color: 'cyan' },
-  { label: 'Backend', key: 'backend' as const, color: 'indigo' },
+  { label: 'Backend', key: 'backend' as const, color: 'teal' },
   { label: 'Database', key: 'database' as const, color: 'purple' },
   { label: 'DevOps', key: 'devops' as const, color: 'orange' },
   { label: 'Other', key: 'other' as const, color: 'green' },
@@ -12,7 +12,7 @@ const categories = [
 
 const colorMap: Record<string, string> = {
   cyan: 'bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border-cyan-500/30 hover:bg-cyan-500/20',
-  indigo: 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/30 hover:bg-indigo-500/20',
+  teal: 'bg-teal-500/10 text-teal-700 dark:text-teal-300 border-teal-500/30 hover:bg-teal-500/20',
   purple: 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/30 hover:bg-purple-500/20',
   orange: 'bg-orange-500/10 text-orange-700 dark:text-orange-300 border-orange-500/30 hover:bg-orange-500/20',
   green: 'bg-green-500/10 text-green-700 dark:text-green-300 border-green-500/30 hover:bg-green-500/20',
@@ -20,7 +20,7 @@ const colorMap: Record<string, string> = {
 
 const headerColorMap: Record<string, string> = {
   cyan: 'text-cyan-700 dark:text-cyan-400',
-  indigo: 'text-indigo-700 dark:text-indigo-400',
+  teal: 'text-teal-700 dark:text-teal-400',
   purple: 'text-purple-700 dark:text-purple-400',
   orange: 'text-orange-700 dark:text-orange-400',
   green: 'text-green-700 dark:text-green-400',
@@ -74,7 +74,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
+          <span className="text-sm font-semibold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
             Expertise
           </span>
           <h2 className="mt-2 text-4xl font-bold text-[var(--text)]">Skills & Technologies</h2>

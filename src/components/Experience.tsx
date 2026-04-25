@@ -23,16 +23,16 @@ function ExperienceCard({ exp, index }: { exp: (typeof experience)[0]; index: nu
         initial={{ scale: 0 }}
         animate={inView ? { scale: 1 } : {}}
         transition={{ delay: index * 0.1 + 0.2, duration: 0.3 }}
-        className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-indigo-500 ring-4 ring-[var(--bg)]"
+        className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-teal-500 ring-4 ring-[var(--bg)]"
       />
 
-      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-colors duration-300 hover:border-indigo-500/30">
+      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-colors duration-300 hover:border-teal-500/30">
         <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
           <div>
             <h3 className="text-xl font-bold text-[var(--text)]">{exp.role}</h3>
             <div className="mt-1 flex items-center gap-2">
-              <Briefcase size={13} className="text-indigo-400" />
-              <span className="text-sm font-medium text-indigo-600 dark:text-indigo-300">{exp.company}</span>
+              <Briefcase size={13} className="text-teal-400" />
+              <span className="text-sm font-medium text-teal-600 dark:text-teal-300">{exp.company}</span>
               <span className="text-[var(--text-faint)]">·</span>
               <span className="text-sm text-[var(--text-subtle)]">{exp.location}</span>
             </div>
@@ -45,7 +45,7 @@ function ExperienceCard({ exp, index }: { exp: (typeof experience)[0]; index: nu
         <ul className="space-y-2">
           {exp.highlights.map((h) => (
             <li key={h} className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
-              <span className="mt-1 shrink-0 text-indigo-400">▸</span>
+              <span className="mt-1 shrink-0 text-teal-400">▸</span>
               {h}
             </li>
           ))}
@@ -69,7 +69,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
+          <span className="text-sm font-semibold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
             Career
           </span>
           <h2 className="mt-2 text-4xl font-bold text-[var(--text)]">Work Experience</h2>

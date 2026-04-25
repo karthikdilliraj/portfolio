@@ -37,7 +37,7 @@ export default function Nav() {
           className="text-xl font-bold tracking-tight text-[var(--text)]"
           whileHover={{ scale: 1.05 }}
         >
-          KD<span className="text-indigo-400">.</span>
+          KD<span className="text-teal-400">.</span>
         </motion.a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -78,7 +78,7 @@ export default function Nav() {
 
           <motion.a
             href="mailto:karthikshaik@gmail.com"
-            className="hidden rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-indigo-500 md:block"
+            className="hidden rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-teal-500 md:block"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
