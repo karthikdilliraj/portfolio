@@ -56,7 +56,7 @@ export default function Hero() {
         className="relative max-w-4xl text-center"
       >
         <motion.div variants={item} className="mb-4">
-          <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-medium text-indigo-300">
+          <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-medium text-indigo-700 dark:text-indigo-300">
             <span className="h-2 w-2 animate-pulse rounded-full bg-indigo-400" />
             Available for opportunities
           </span>

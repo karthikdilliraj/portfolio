@@ -25,7 +25,7 @@ export default function About() {
       <div className="mx-auto max-w-6xl">
         <FadeIn>
           <div className="mb-16 text-center">
-            <span className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+            <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
               About Me
             </span>
             <h2 className="mt-2 text-4xl font-bold text-[var(--text)]">Who I Am</h2>
@@ -71,14 +71,14 @@ export default function About() {
                       <h3 className="text-lg font-semibold text-[var(--text)]">
                         {edu.institution}
                       </h3>
-                      <p className="text-sm font-medium text-indigo-400">
+                      <p className="text-sm font-medium text-indigo-600 dark:text-indigo-300">
                         {edu.degree} · {edu.field}
                       </p>
                     </div>
                     <span className="shrink-0 text-sm text-[var(--text-subtle)]">{edu.period}</span>
                   </div>
                   <div className="mb-3 flex items-center gap-2">
-                    <span className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-2 py-0.5 text-xs font-medium text-indigo-300">
+                    <span className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-2 py-0.5 text-xs font-medium text-indigo-700 dark:text-indigo-300">
                       GPA: {edu.gpa}
                     </span>
                   </div>

@@ -74,7 +74,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <span className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+          <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
             Expertise
           </span>
           <h2 className="mt-2 text-4xl font-bold text-[var(--text)]">Skills & Technologies</h2>

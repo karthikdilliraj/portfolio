@@ -37,7 +37,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <span className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+          <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
             Contact
           </span>
           <h2 className="mt-2 mb-4 text-4xl font-bold text-[var(--text)]">Get In Touch</h2>
@@ -73,7 +73,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-xs text-[var(--text-subtle)]">{label}</p>
-                      <p className="text-sm font-medium text-[var(--text-muted)] transition-colors group-hover:text-indigo-300">
+                      <p className="text-sm font-medium text-[var(--text-muted)] transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-300">
                         {value}
                       </p>
                     </div>

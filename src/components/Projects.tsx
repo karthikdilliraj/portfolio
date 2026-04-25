@@ -100,7 +100,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <span className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+          <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
             Portfolio
           </span>
           <h2 className="mt-2 mb-4 text-4xl font-bold text-[var(--text)]">Projects</h2>
